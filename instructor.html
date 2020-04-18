@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Instructors Repository {% endblock %}
+{% block body %} 
+
+    <h1>{{header}}</h1>
+    <h2>{{table_title}}</h2>
+    <table border="1">
+        <th>Name</th>
+        <th>Cwid</th>
+        <th>Course</th>
+        <th>Grade</th>
+        <th>Instructor</th>
+        {% for instructor in data %}
+            <tr>
+                <td>{{instructor.name}}</td>
+                <td>{{instructor.cwid}}</td>
+                <td>{{instructor.course}}</td>
+                <td>{{instructor.grade}}</td>
+                <td>{{instructor.instructor}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
